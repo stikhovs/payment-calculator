@@ -17,8 +17,8 @@ public class PaymentCalculation extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("ViewOne.fxml"));
-        
+        //Parent root = FXMLLoader.load(getClass().getResource("ViewOne.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
