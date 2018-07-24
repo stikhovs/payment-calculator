@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="452.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paymentcalculation.ViewThree">
+   <children>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="28.0" prefHeight="37.0" prefWidth="723.0" text="Помощник расчета квитанций" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font name="Comic Sans MS" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="25.0" layoutY="73.0" prefHeight="0.0" prefWidth="717.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0" />
+      <Button fx:id="calculateButton" layoutX="608.0" layoutY="399.0" onAction="#calculateAction" prefHeight="39.0" prefWidth="101.0" text="Готово">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="399.0" onAction="#SceneTwoAction" prefHeight="39.0" prefWidth="101.0" text="Назад">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="saveFileTextField" disable="true" layoutX="55.0" layoutY="118.0" prefHeight="25.0" prefWidth="556.0" promptText="Путь к файлу">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="55.0" layoutY="88.0" text="Укажите, куда сохранить расчет">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="chooseSavePathButton" layoutX="617.0" layoutY="116.0" mnemonicParsing="false" onAction="#saveFileAction" prefHeight="31.0" prefWidth="53.0" text="...">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="finished" alignment="CENTER" layoutX="191.0" layoutY="243.0" prefHeight="42.0" prefWidth="341.0" text="Расчет сформирован" textFill="#45d728">
+         <font>
+            <Font name="Comic Sans MS" size="30.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progressBar" layoutX="55.0" layoutY="168.0" prefHeight="52.0" prefWidth="556.0" progress="0.0" />
+      <ProgressIndicator fx:id="progressIndicator" layoutX="609.0" layoutY="166.0" prefHeight="68.0" prefWidth="101.0" progress="0.0" visible="false" />
+      <Button fx:id="openReportButton" layoutX="272.0" layoutY="304.0" mnemonicParsing="false" onAction="#openReportAction" prefHeight="37.0" prefWidth="180.0" text="Открыть файл">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="progressLabel" layoutX="55.0" layoutY="221.0" prefHeight="30.0" prefWidth="556.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
