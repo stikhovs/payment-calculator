@@ -44,6 +44,8 @@ public class ViewOne implements Initializable {
     static int chosenYear;
     @FXML
     Button nextSceneButton;
+    @FXML
+    Button backButton;
     
     @FXML
     private void openFileAction(ActionEvent event) {
@@ -99,6 +101,17 @@ public class ViewOne implements Initializable {
 	if(word == null || word.isEmpty()) return "";//или return word;
 	return word.substring(0, 1).toUpperCase() + word.substring(1);
 }
+    
+    
+    @FXML
+    private void backAction(ActionEvent event) throws IOException {
+        Parent next = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Scene sceneTwo = new Scene(next);
+        Node source = (Node) event.getSource();
+        Stage thisStage = (Stage) source.getScene().getWindow();
+        thisStage.setScene(sceneTwo);
+        thisStage.show();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

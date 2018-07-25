@@ -28,7 +28,7 @@
             <Font name="Comic Sans MS" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="openFileButton" layoutX="617.0" layoutY="116.0" mnemonicParsing="false" onAction="#openFileAction" prefHeight="31.0" prefWidth="53.0" text="...">
+      <Button fx:id="chooseFileButton" layoutX="617.0" layoutY="116.0" mnemonicParsing="false" onAction="#chooseFileAction" prefHeight="31.0" prefWidth="53.0" text="...">
          <font>
             <Font name="Comic Sans MS" size="14.0" />
          </font>
@@ -58,14 +58,28 @@
          <font>
             <Font name="Comic Sans MS" size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="backButton" layoutX="39.0" layoutY="394.0" mnemonicParsing="false" onAction="#backAction" text="Назад" AnchorPane.leftAnchor="20.0">
          <font>
             <Font name="Comic Sans MS" size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <ProgressBar fx:id="progressBar" layoutX="55.0" layoutY="271.0" prefHeight="55.0" prefWidth="556.0" progress="0.0" />
       <ProgressIndicator fx:id="progressIndicator" layoutX="623.0" layoutY="271.0" prefHeight="72.0" prefWidth="75.0" progress="0.0" />
       <Label fx:id="progressLabel" layoutX="58.0" layoutY="335.0" text="Label" />
+      <Button fx:id="openFileButton" layoutX="274.0" layoutY="352.0" mnemonicParsing="false" onAction="#openFileAction" text="Открыть файл">
+         <font>
+            <Font name="Bookman Old Style" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

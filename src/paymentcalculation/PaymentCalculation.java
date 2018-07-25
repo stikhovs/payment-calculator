@@ -22,7 +22,8 @@ public class PaymentCalculation extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
-        stage.setTitle("Помощник расчета квитанций (by S.Tikhov)");
+        //stage.setTitle("Помощник расчета квитанций (by S.Tikhov)");
+        stage.setTitle("Помощник администратора (by S.Tikhov)");
         stage.getIcons().add(new Image("resources/LL.png"));
         stage.setResizable(false);
         stage.show();
