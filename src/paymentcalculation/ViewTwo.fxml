@@ -34,22 +34,32 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <DatePicker fx:id="holidays" layoutX="54.0" layoutY="106.0" prefHeight="25.0" prefWidth="182.0" promptText="Праздничные дни" AnchorPane.topAnchor="106.0" />
-      <TableView fx:id="holidayTable" layoutX="172.0" layoutY="206.0" prefHeight="180.0" prefWidth="380.0">
+      <DatePicker fx:id="holidays" layoutX="50.0" layoutY="87.0" prefHeight="25.0" prefWidth="182.0" promptText="Праздничные дни" AnchorPane.topAnchor="87.0" />
+      <TableView fx:id="holidayTable" layoutX="172.0" layoutY="228.0" prefHeight="158.0" prefWidth="380.0">
          <columns>
             <TableColumn fx:id="holidayColumn" prefWidth="382.0" text="Выходные дни" />
          </columns>
       </TableView>
-      <DatePicker fx:id="holidayPeriodStart" layoutX="54.0" layoutY="167.0" prefHeight="25.0" prefWidth="182.0" promptText="Первый день периода" />
-      <DatePicker fx:id="holidayPeriodEnd" disable="true" layoutX="247.0" layoutY="167.0" prefHeight="25.0" prefWidth="182.0" promptText="Последний день периода" />
-      <Label layoutX="54.0" layoutY="76.0" text="Укажите выходные дни" AnchorPane.topAnchor="75.0">
+      <DatePicker fx:id="holidayPeriodStart" layoutX="50.0" layoutY="148.0" prefHeight="25.0" prefWidth="182.0" promptText="Первый день периода" />
+      <DatePicker fx:id="holidayPeriodEnd" disable="true" layoutX="243.0" layoutY="148.0" prefHeight="25.0" prefWidth="182.0" promptText="Последний день периода" />
+      <Label layoutX="50.0" layoutY="56.0" text="Укажите выходные дни" AnchorPane.topAnchor="56.0">
          <font>
             <Font name="Comic Sans MS" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="54.0" layoutY="136.0" text="Укажите период выходных дней">
+      <Label layoutX="50.0" layoutY="117.0" text="Укажите период выходных дней">
          <font>
             <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="50.0" layoutY="186.0" mnemonicParsing="false" onAction="#openDayChangeWindow" prefHeight="30.0" prefWidth="235.0" text="Добавить перенос дней недели">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="addedLabel" layoutX="298.0" layoutY="193.0" text="Label" textFill="#28ae1e">
+         <font>
+            <Font size="14.0" />
          </font>
       </Label>
    </children>

@@ -40,6 +40,9 @@ public class Student {
     public void setNextMonthHours(double hours){
         this.nextMonthHours += hours;
     }
+    public void removeNextMonthHours(double hours){
+        this.nextMonthHours -= hours;
+    }
     
     public double countPayment(){
         return this.getNextMonthHours() - this.getBalance();
