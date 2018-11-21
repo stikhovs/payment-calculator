@@ -2,7 +2,6 @@ package paymentcalculation;
 
 import java.awt.Desktop;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,27 +15,7 @@ import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.DoubleAdder;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.ProgressIndicator;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
-import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
+
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.Cell;
@@ -53,6 +32,23 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.TextField;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 class Condition {
 
@@ -364,8 +360,9 @@ public class ViewThree implements Initializable {
         RegionUtil.setBorderLeft(BorderStyle.THIN, new CellRangeAddress(rowCount, rowCount, cellCount, cellCount + columnQuantity - 1), sheet);
         cell = row.createCell(cellCount);
         cell.setCellValue(group.getGroupId() + " (" + group.getSheetName() + "), " + (int) group.getPricePerHour() + " р/ач " + ", Начало: " + group.getClassStartTime() + ", " + group.sheduleDaysToString()
-                + "\n" + group.getTeachers() + ", " + group.getGroupLevel() + ", Длительность: " + group.getDuration() + " а/ч");
-        cell.getRow().setHeight((short) (cell.getRow().getHeight() * 2));
+                + "\n" + group.getTeachers() + ", " + group.getGroupLevel() + ", Длительность: " + group.getDuration() + " а/ч" + ", "
+                + "\n" + "Часов в следующем месяце: " + String.format("%.2f", group.getNextMonthHours()));
+        cell.getRow().setHeight((short) (cell.getRow().getHeight() * 3));
 
         //System.out.println(group.getSheetName() + ":" + group.getPricePerHour());
         cell.setCellStyle(groupInfo);
@@ -532,7 +529,8 @@ public class ViewThree implements Initializable {
                 });
 
                 System.out.println("РАБОТАЮ С ФАЙЛОМ: " + ViewOne.chosenFile);
-                XSSFWorkbook workbook = new XSSFWorkbook(OPCPackage.open(file));
+                //XSSFWorkbook workbook = new XSSFWorkbook(OPCPackage.open(file));
+                XSSFWorkbook workbook = new XSSFWorkbook(file);
                 int sheetsNumber = workbook.getNumberOfSheets();
                 /* Создание коллекции, содержащей дни недели выбранного месяца */
                 Platform.runLater(new Runnable() {
@@ -596,7 +594,7 @@ public class ViewThree implements Initializable {
 
                         GroupInfo groupInfo = new GroupInfo();
                         groupInfo.setSheetName(sheetItem.getSheetName());
-
+                        
                         for (String dataCell : dataCells) {
 
                             CellAddress address = new CellAddress(dataCell);
@@ -612,8 +610,14 @@ public class ViewThree implements Initializable {
                             String coords = cellOne.getAddress().toString();
                             switch (coords) {
                                 case ("A1"):
-                                    groupInfo.setPricePerHour(Double.parseDouble(cellItem.getValue()));
-                                    break;
+                                	try {
+                                		groupInfo.setPricePerHour(Double.parseDouble(cellItem.getValue()));
+                                		break;
+                                	}
+	                                catch(NumberFormatException e) {
+	                                	System.out.println("В ячейке " + coords + " листа " + groupInfo.getSheetName() + " ожидалось число");
+	                                	groupInfo.setPricePerHour(0);
+	                                }
                                 case ("A3"):
                                     groupInfo.setGroupId(cellItem.getValue());
                                     break;
@@ -627,11 +631,23 @@ public class ViewThree implements Initializable {
                                     groupInfo.setTeacherTwo(cellItem.getValue());
                                     break;
                                 case ("Y1"):
-                                    groupInfo.setClassDurationOne(Double.parseDouble(cellItem.getValue()));
-                                    break;
+                                	try {
+                                        groupInfo.setClassDurationOne(Double.parseDouble(cellItem.getValue()));
+                                        break;
+                                	}
+                                	catch(NumberFormatException e) {
+	                                	System.out.println("В ячейке " + coords + " листа " + groupInfo.getSheetName() + " ожидалось число");
+	                                	groupInfo.setClassDurationOne(0);
+	                                }
                                 case ("Y3"):
-                                    groupInfo.setClassDurationTwo(Double.parseDouble(cellItem.getValue()));
-                                    break;
+                                	try {
+                                		groupInfo.setClassDurationTwo(Double.parseDouble(cellItem.getValue()));
+                                        break;
+                                	}
+                                	catch(NumberFormatException e) {
+	                                	System.out.println("В ячейке " + coords + " листа " + groupInfo.getSheetName() + " ожидалось число");
+	                                	groupInfo.setClassDurationTwo(0);
+	                                }
                                 case ("AF2"):
                                     groupInfo.setClassStartTime(String.format("%tH:%tM", cellOne.getDateCellValue(), cellOne.getDateCellValue()));
                                     break;
@@ -791,7 +807,7 @@ public class ViewThree implements Initializable {
                                         for (Student student : groupInfo.getStudentsInfo()) {
                                             student.setNextMonthHours(groupInfo.getClassDurationOne());
                                         }
-
+                                        groupInfo.addNextMonthHours(groupInfo.getClassDurationOne());
                                     }
                                 });
                                 groupInfo.getClassDaysTwo().forEach((classDay) -> {
@@ -799,6 +815,7 @@ public class ViewThree implements Initializable {
                                         for (Student student : groupInfo.getStudentsInfo()) {
                                             student.setNextMonthHours(groupInfo.getClassDurationTwo());
                                         }
+                                        groupInfo.addNextMonthHours(groupInfo.getClassDurationTwo());
                                     }
                                 });
                             }
@@ -812,7 +829,7 @@ public class ViewThree implements Initializable {
                                             for (Student student : groupInfo.getStudentsInfo()) {
                                                 student.removeNextMonthHours(groupInfo.getClassDurationOne());
                                             }
-
+                                            groupInfo.removeNextMonthHours(groupInfo.getClassDurationOne());
                                         }
                                     });
                                     groupInfo.getClassDaysTwo().forEach((classDay) -> {
@@ -820,6 +837,7 @@ public class ViewThree implements Initializable {
                                             for (Student student : groupInfo.getStudentsInfo()) {
                                                 student.removeNextMonthHours(groupInfo.getClassDurationTwo());
                                             }
+                                            groupInfo.removeNextMonthHours(groupInfo.getClassDurationTwo());
                                         }
                                     });
                                 }
@@ -831,7 +849,7 @@ public class ViewThree implements Initializable {
                                             for (Student student : groupInfo.getStudentsInfo()) {
                                                 student.setNextMonthHours(groupInfo.getClassDurationOne());
                                             }
-
+                                            groupInfo.addNextMonthHours(groupInfo.getClassDurationOne());
                                         }
                                     });
                                     groupInfo.getClassDaysTwo().forEach((classDay) -> {
@@ -839,6 +857,7 @@ public class ViewThree implements Initializable {
                                             for (Student student : groupInfo.getStudentsInfo()) {
                                                 student.setNextMonthHours(groupInfo.getClassDurationTwo());
                                             }
+                                            groupInfo.addNextMonthHours(groupInfo.getClassDurationTwo());
                                         }
                                     });
                                 }

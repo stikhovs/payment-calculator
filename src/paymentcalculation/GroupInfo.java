@@ -25,9 +25,19 @@ public class GroupInfo {
     private boolean isSat = false;
     private boolean isOtherSchedule = false;    
     private String daysFilterString = "";
+    private double nextMonthHours = 0.0;
     
     
-    public String getSheetName(){
+    public double getNextMonthHours(){
+        return this.nextMonthHours;
+    }
+    public void addNextMonthHours(double hours){
+        this.nextMonthHours += hours;
+    }
+    public void removeNextMonthHours(double hours){
+        this.nextMonthHours -= hours;
+    }
+	public String getSheetName(){
         return this.sheetName;
     }
     public double getPricePerHour(){
@@ -183,9 +193,22 @@ public class GroupInfo {
         }
         return student;
     }
+	@Override
+	public String toString() {
+		return "GroupInfo [sheetName=" + sheetName + ", pricePerHour=" + pricePerHour + ", groupId=" + groupId
+				+ ", groupLevel=" + groupLevel + ", teacherOne=" + teacherOne + ", teacherTwo=" + teacherTwo
+				+ ", classDurationOne=" + classDurationOne + ", classDurationTwo=" + classDurationTwo
+				+ ", classStartTime=" + classStartTime + ", classDaysOne=" + classDaysOne + ", classDaysTwo="
+				+ classDaysTwo + ", studentsInfo=" + studentsInfo + ", scheduleDays=" + scheduleDays + ", isIndividual="
+				+ isIndividual + ", isMonWenFr=" + isMonWenFr + ", isTueTh=" + isTueTh + ", isSat=" + isSat
+				+ ", isOtherSchedule=" + isOtherSchedule + ", daysFilterString=" + daysFilterString
+				+ ", nextMonthHours=" + nextMonthHours + "]";
+	}
     
-    @Override
-    public String toString(){
+    
+    
+    
+    /*public String toString(){
         String days = "";
         this.createSheduleDays();
         for(String day : this.getScheduleDays()){
@@ -204,7 +227,7 @@ public class GroupInfo {
                + "Начало занятия: " + this.getClassStartTime() + "\n"
                + "Расписание: " + days + "\n"
                + this.createStudentsList();
-    }
+    }*/
     
 }
 

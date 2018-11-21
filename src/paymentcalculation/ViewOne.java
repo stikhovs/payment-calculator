@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -59,7 +60,11 @@ public class ViewOne implements Initializable {
         }
         
         
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("xlsm files","*.xlsm"));
+        fc.getExtensionFilters().addAll(
+        		new FileChooser.ExtensionFilter("Файлы Excel", Arrays.asList("*.xl,","*.xlsx","*.xlsm","*.xlsb","*.xlam","*.xltx","*.xltm","*.xls","*.xlt"))
+        		/*new FileChooser.ExtensionFilter("xlsm files","*.xlsm"),
+        		new FileChooser.ExtensionFilter("xlsx files","*.xlsx")*/
+        		);
         File file = fc.showOpenDialog(null);
         
            if(file != null){
