@@ -68,8 +68,10 @@ public class ViewThree implements Initializable {
     String[] groupInfoCells = {"A1", "A3", "E3", "R1", "R3", "Y1", "Y3", "AF2"};
     String[] studentNameCells = {"B14", "B15", "B16", "B17", "B18", "B19", "B20", "B21", "B22", "B23", "B24", "B25", "B26", "B27", "B28", "B29", "B30", "B31", "B32", "B33"};
     String[] studentBalanceCells = {"AF14", "AF15", "AF16", "AF17", "AF18", "AF19", "AF20", "AF21", "AF22", "AF23", "AF24", "AF25", "AF26", "AF27", "AF28", "AF29", "AF30", "AF31", "AF32", "AF33"};
-    String[] weekDaysOne = {"AO2", "AP2", "AQ2", "AR2", "AS2", "AT2", "AU2"};
-    String[] weekDaysTwo = {"AO4", "AP4", "AQ4", "AR4", "AS4", "AT4", "AU4"};
+    /*String[] weekDaysOne = {"AO2", "AP2", "AQ2", "AR2", "AS2", "AT2", "AU2"};
+    String[] weekDaysTwo = {"AO4", "AP4", "AQ4", "AR4", "AS4", "AT4", "AU4"};*/
+    String[] weekDaysOne = {"AY2", "AZ2", "BA2", "BB2", "BC2", "BD2", "BE2"};
+    String[] weekDaysTwo = {"AY4", "AZ4", "BA4", "BB4", "BC4", "BD4", "BE4"};
     String[] indGraphicCells = {"H14", "H15", "H16", "H17", "H18", "H19", "H20", "H21", "H22", "H23", "H24", "H25", "H26", "H27", "H28", "H29", "H30", "H31", "H32", "H33"};
     String singleDiscountColumn = "M14";
     String permanentDiscountColumn = "O14";
@@ -561,6 +563,9 @@ public class ViewThree implements Initializable {
                     if (sheet.getSheetName().equals("OSTATKY")) {
                         continue;
                     }
+                    if (sheet.getSheetName().equalsIgnoreCase("ostatki")) {
+                        continue;
+                    }
                     if (sheet.getSheetName().equals("OS")) {
                         continue;
                     }
@@ -633,6 +638,9 @@ public class ViewThree implements Initializable {
                                 case ("Y1"):
                                 	try {
                                         groupInfo.setClassDurationOne(Double.parseDouble(cellItem.getValue()));
+                                      System.out.println("Cell value: " + cellItem.getValue());
+                                      System.out.println("After parsing: " + Double.parseDouble(cellItem.getValue()));
+                                      System.out.println("Group next month hours: " + groupInfo.getNextMonthHours());
                                         break;
                                 	}
                                 	catch(NumberFormatException e) {
@@ -800,9 +808,12 @@ public class ViewThree implements Initializable {
                         int dateNumber = 0;
                         for (String weekDay : ViewTwo.nextMonthDaysOfWeek) {
 
+                            System.out.println("WEEKDAY: " + weekDay);
+
                             if (!ViewTwo.nextMonthHolidays.contains(ViewTwo.nextMonthDays.get(dateNumber))) {
 
                                 groupInfo.getClassDaysOne().forEach((classDay) -> {
+                                    System.out.println("CLASSDAY: " + classDay);
                                     if (classDay.equalsIgnoreCase(weekDay)) {
                                         for (Student student : groupInfo.getStudentsInfo()) {
                                             student.setNextMonthHours(groupInfo.getClassDurationOne());

@@ -1,0 +1,82 @@
+
+fsquid:S1192d"JDefine a constant instead of duplicating this literal "user.home" 3 times.(ƒŠ€¡úÿÿÿÿ
+dsquid:S1192d"HDefine a constant instead of duplicating this literal "Desktop" 3 times.(ƒŠ€¡úÿÿÿÿ
+p
+squid:S135¡"YReduce the total number of break and continue statements in this loop to use at most one.(µŸ»Ğ
+u
+squid:S135©"YReduce the total number of break and continue statements in this loop to use at most one.(ø®Şşÿÿÿÿ
+Msquid:S1141Í"5Extract this nested try block into a separate method.(Ş»Šü
+Qsquid:S4973›"9Use the "equals" method if value comparison was intended.(ŒÃ·Ù
+Qsquid:S4973¢"9Use the "equals" method if value comparison was intended.(€¶Ÿì
+bsquid:S2259í"EA "NullPointerException" could be thrown; "desktop" is nullable here.(ŞÆ³ªÿÿÿÿÿ
+Esquid:S1604•"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+Esquid:S1604 "(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+Esquid:S1604Í"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+Esquid:S1604À"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+Esquid:S1604Ó"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+;squid:S1148‡"#Use a logger to log this exception.(Ç’Çê
+@squid:S1148Ñ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+;squid:S1148à"#Use a logger to log this exception.(Ç’Çê
+@squid:S1148ï"#Use a logger to log this exception.(Ú¸ÿÿÿÿÿ
+[squid:S1155·">Use isEmpty() to check whether the collection is empty or not.(ÛŞğıÿÿÿÿ
+wsquid:S14503"[Remove the "saveFilePath" field and declare it as a local variable in the relevant methods.(¨Ôõèüÿÿÿÿ
+jsquid:S14507"SRemove the "pool" field and declare it as a local variable in the relevant methods.(Îë‹™
+Esquid:S3077O".Remove the "volatile" keyword from this field.(·ËÖí
+O
+squid:S106s"9Replace this use of System.out or System.err by a logger.(‡à‹Ş
+O
+squid:S106u"9Replace this use of System.out or System.err by a logger.(ä‰çå
+Rsquid:S1854}"6Remove this useless assignment to local variable "fc".(êƒ±øûÿÿÿÿ
+U
+squid:S106ˆ"9Replace this use of System.out or System.err by a logger.(øÉ­¯ÿÿÿÿÿ
+jsquid:S3776—"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(’Ó Ô
+^squid:S1126·"AReplace this if-then-else statement by a single return statement.(ÛŞğıÿÿÿÿ
+qsquid:S3012Á"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(åŒ€›
+Wsquid:S1854Ç"?Remove this useless assignment to local variable "discountPay".(Şç×Å
+¯%squid:RedundantThrowsDeclarationCheckØ"xRemove the declaration of thrown exception 'java.io.FileNotFoundException' which is a subclass of 'java.io.IOException'.(’”ğ÷úÿÿÿÿ
+£%squid:RedundantThrowsDeclarationCheckØ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(’”ğ÷úÿÿÿÿ
+U
+squid:S106Û"9Replace this use of System.out or System.err by a logger.(ù¦ğãüÿÿÿÿ
+O
+squid:S106°"9Replace this use of System.out or System.err by a logger.(´©
+`squid:S5361É"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ñüÜ
+jsquid:S3776å"RRefactor this method to reduce its Cognitive Complexity from 71 to the 15 allowed.(ìëè÷
+U
+squid:S106ø"9Replace this use of System.out or System.err by a logger.(êì…Üøÿÿÿÿ
+csquid:S2142ş"FEither re-interrupt this method or rethrow the "InterruptedException".(è®ã¶øÿÿÿÿ
+`squid:S2276ı"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¤ù»ÿÿÿÿÿ
+P
+squid:S106ÿ"9Replace this use of System.out or System.err by a logger.(”¨Ÿ
+Hsquid:S2446ƒ"0"notify" may not wake up the appropriate thread.(Â€äÔ
+csquid:S2142†"FEither re-interrupt this method or rethrow the "InterruptedException".(è®ã¶øÿÿÿÿ
+U
+squid:S106œ"9Replace this use of System.out or System.err by a logger.(Éüˆüıÿÿÿÿ
+P
+squid:S106Ã"9Replace this use of System.out or System.err by a logger.(Ğ¶ª·
+U
+squid:S106Ä"9Replace this use of System.out or System.err by a logger.(Æ±Ó±úÿÿÿÿ
+Q"squid:SwitchLastCaseIsDefaultCheckä""Add a default case to this switch.(ÑÚ²Ä
+esquid:S5361£"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ßĞààÿÿÿÿÿ
+esquid:S5361¦"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ßĞààÿÿÿÿÿ
+Hsquid:S2446·"0"notify" may not wake up the appropriate thread.(Â€äÔ
+Rsquid:S2274¸":Remove this call to "wait" or move it into a "while" loop.(Åá‡Ì
+U
+squid:S106Ç"9Replace this use of System.out or System.err by a logger.(‰µ¡’ÿÿÿÿÿ
+P
+squid:S106Ğ"9Replace this use of System.out or System.err by a logger.(ü²•ñ
+P
+squid:S106Ú"9Replace this use of System.out or System.err by a logger.(‰¥è×
+P
+squid:S106Û"9Replace this use of System.out or System.err by a logger.(øµÇ§
+U
+squid:S106ß"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ
+Csquid:S1481}"'Remove this unused "fc" local variable.(êƒ±øûÿÿÿÿ
+Lsquid:S10683"0Remove this unused "saveFilePath" private field.(¨Ôõèüÿÿÿÿ
+gsquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(é•‡ÿıÿÿÿÿ
+hsquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(”…ùÕıÿÿÿÿ
+hsquid:CommentedOutCodeLine²"<This block of commented-out lines of code should be removed.(¬ó†×şÿÿÿÿ
+csquid:CommentedOutCodeLine»"<This block of commented-out lines of code should be removed.(ÕÂ±è
+hsquid:CommentedOutCodeLine¿"<This block of commented-out lines of code should be removed.(”…ùÕıÿÿÿÿ
+csquid:CommentedOutCodeLineÌ"<This block of commented-out lines of code should be removed.(Ë¾Â¯
+bsquid:CommentedOutCodeLineÜ"<This block of commented-out lines of code should be removed.(àÜˆM
+hsquid:CommentedOutCodeLineâ"<This block of commented-out lines of code should be removed.(ÊœÍşÿÿÿÿ

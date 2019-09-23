@@ -150,10 +150,10 @@ public class GroupInfo {
                     iter.remove();
                 }
         this.scheduleDays.clear();
-        this.scheduleDays = weekDays; 
-        
+        this.scheduleDays = weekDays;
+
         if(!this.getIsIndividual()){
-             if(scheduleDays.size() == 1 && scheduleDays.get(0).equals("сб")) isSat = true;
+            if(scheduleDays.size() == 1 && scheduleDays.get(0).equals("сб")) isSat = true;
             else if(scheduleDays.size() >= 1 && (scheduleDays.contains("вт") || scheduleDays.contains("чт"))) isTueTh = true;
             else if(scheduleDays.size() >= 1 && (scheduleDays.contains("пн") || scheduleDays.contains("ср") ||scheduleDays.contains("пт"))) isMonWenFr = true;
             else isOtherSchedule = true;
@@ -204,30 +204,6 @@ public class GroupInfo {
 				+ ", isOtherSchedule=" + isOtherSchedule + ", daysFilterString=" + daysFilterString
 				+ ", nextMonthHours=" + nextMonthHours + "]";
 	}
-    
-    
-    
-    
-    /*public String toString(){
-        String days = "";
-        this.createSheduleDays();
-        for(String day : this.getScheduleDays()){
-            days += day + " ";
-        }
-        
-        return "Название листа: " + this.getSheetName() + "\n"
-               + "Номер группы: " + this.getGroupId() + "\n" 
-               + "Цена за 1 а/ч: " + String.valueOf(this.getPricePerHour()) + " руб.\n" 
-               + "Уровень: " + this.getGroupLevel() + "\n" 
-               + "Преподаватель: " + this.getTeacherOne() + "\n" 
-               + (this.getTeacherTwo().isEmpty() ? "":"Второй преподаватель: " + this.getTeacherOne() + "\n" )
-               + "Продолжительность занятия: " + String.valueOf(this.getClassDurationOne()) + " а/ч\n" 
-               + (this.getClassDurationTwo() == 0.0 ? "" : (this.getClassDurationTwo() == this.classDurationOne ? "" : "Продолжительность занятия со вторым преподавателем: " + String.valueOf(this.getClassDurationTwo()) + " а/ч\n"))
-                
-               + "Начало занятия: " + this.getClassStartTime() + "\n"
-               + "Расписание: " + days + "\n"
-               + this.createStudentsList();
-    }*/
-    
+
 }
 

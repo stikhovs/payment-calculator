@@ -6,10 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.DoubleAdder;
@@ -103,7 +100,7 @@ public class DebtFinderController implements Initializable {
             fc.setInitialDirectory(new File(savedPath));
         }
 
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("xlsm files", "*.xlsm"));
+        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Файлы Excel", Arrays.asList("*.xl,","*.xlsx","*.xlsm","*.xlsb","*.xlam","*.xltx","*.xltm","*.xls","*.xlt")));
         File file = fc.showOpenDialog(null);
 
         if (file != null) {
@@ -432,6 +429,9 @@ public class DebtFinderController implements Initializable {
                         continue;
                     }
                     if (sheet.getSheetName().equals("OSTATKY")) {
+                        continue;
+                    }
+                    if (sheet.getSheetName().equals("ostatki")) {
                         continue;
                     }
                     if (sheet.getSheetName().equals("OS")) {

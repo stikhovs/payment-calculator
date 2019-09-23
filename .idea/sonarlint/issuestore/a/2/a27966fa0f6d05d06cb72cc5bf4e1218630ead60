@@ -1,0 +1,16 @@
+
+4squid:S1643À"Use a StringBuilder instead.(Õ¥ü¥
+‡squid:S1319I"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(®¢„Ü
+[squid:S1155">Use isEmpty() to check whether the collection is empty or not.(ŞËÕÜşÿÿÿÿ
+4squid:S1643»"Use a StringBuilder instead.(‰²€‡
+4squid:S1643§"Use a StringBuilder instead.(å”Õ”
+‡squid:S1319C"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¾¢ã°
+_squid:S3973•"GUse indentation to denote the code conditionally executed by this "if".(Ûòå
+9squid:S1643½"Use a StringBuilder instead.(ÑÂÅíüÿÿÿÿ
+4squid:S1643¾"Use a StringBuilder instead.(¥ØŞ÷
+‡squid:S1319F"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Š¤æ±
+jsquid:S3776‡"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ê¨ÿ¾
+9squid:S1643º"Use a StringBuilder instead.(•Ò·ƒøÿÿÿÿ
+‡squid:S1319L"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(×§¶ñ
+[squid:S1155">Use isEmpty() to check whether the collection is empty or not.(ÉÎ”ùÿÿÿÿ
+4squid:S1643¿"Use a StringBuilder instead.(è‡½

@@ -1,0 +1,144 @@
+
+qsquid:S3012Ì"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(åŒ€›
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(‹À¢ùÿÿÿÿ
+Rsquid:S1141ÿ"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Rsquid:S2209à"5Change this instance-reference to a static reference.(“ıšìûÿÿÿÿ
+\
+squid:S106‚"9Replace this use of System.out or System.err by a logger.(ü£áŸÿÿÿÿÿ8°ı Ô-
+esquid:S5361×"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ßĞààÿÿÿÿÿ
+P
+squid:S106¥"9Replace this use of System.out or System.err by a logger.(›ÉŒÄ
+csquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÕÂ±è
+c
+squid:S128é"LEnd this switch case with an unconditional break, return or throw statement.(Í´€
+jsquid:S1192ï"MDefine a constant instead of duplicating this literal " Ğ»Ğ¸ÑÑ‚Ğ° " 3 times.(‹À¢ùÿÿÿÿ
+Esquid:S1604"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+U
+squid:S106Ô"9Replace this use of System.out or System.err by a logger.(™ôûÆøÿÿÿÿ
+Qsquid:S4973Ó"9Use the "equals" method if value comparison was intended.(€¶Ÿì
+bsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(ı¹
+hsquid:CommentedOutCodeLine÷"<This block of commented-out lines of code should be removed.(ğøâúÿÿÿÿ
+\
+squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(Á‚–Ìÿÿÿÿÿ8øß° Ô-
+U
+squid:S106È"9Replace this use of System.out or System.err by a logger.(Æ±Ó±úÿÿÿÿ
+Rsquid:S2209×"5Change this instance-reference to a static reference.(ÿ˜¹ÿÿÿÿÿ
+U
+squid:S106•"9Replace this use of System.out or System.err by a logger.(¾¼Àÿÿÿÿÿ
+csquid:CommentedOutCodeLineÔ"<This block of commented-out lines of code should be removed.(š£ì®
+;squid:S1148û"#Use a logger to log this exception.(Ç’Çê
+[squid:S1155Â">Use isEmpty() to check whether the collection is empty or not.(ÛŞğıÿÿÿÿ
+Hsquid:S2446ı"0"notify" may not wake up the appropriate thread.(Â€äÔ
+csquid:CommentedOutCodeLineï"<This block of commented-out lines of code should be removed.(ÿóêñ
+Nsquid:S1611¸"6Remove the parentheses around the "classDay" parameter(öÑê…
+P
+squid:S106š"9Replace this use of System.out or System.err by a logger.(ü²•ñ
+;squid:S1148ª"#Use a logger to log this exception.(Ç’Çê
+jsquid:S3776¢"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(’Ó Ô
+\squid:S3252×"?Use static access with "java.util.Calendar" for "DAY_OF_MONTH".(ÿ˜¹ÿÿÿÿÿ
+Esquid:S1604"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+Zsquid:S1126À"BReplace this if-then-else statement by a single method invocation.(ŒÃ·Ù
+\
+squid:S106°"9Replace this use of System.out or System.err by a logger.(Ÿüöœùÿÿÿÿ8í™Ş Ô-
+Nsquid:S1611Î"6Remove the parentheses around the "classDay" parameter(öÑê…
+Q"squid:SwitchLastCaseIsDefaultCheckŒ""Add a default case to this switch.(íâİâ
+Rsquid:S1854{"6Remove this useless assignment to local variable "fc".(êƒ±øûÿÿÿÿ
+psquid:S3776Û"SRefactor this method to reduce its Cognitive Complexity from 213 to the 15 allowed.(ı·ÄÇûÿÿÿÿ
+P
+squid:S106¤"9Replace this use of System.out or System.err by a logger.(‰¥è×
+P
+squid:S106Ç"9Replace this use of System.out or System.err by a logger.(Ğ¶ª·
+esquid:S1192õ"MDefine a constant instead of duplicating this literal "Ğ´Ñ€ÑƒĞ³Ğ¾Ğµ" 4 times.(şŞÅ”
+Tsquid:S3252à"7Use static access with "java.util.Calendar" for "DATE".(“ıšìûÿÿÿÿ
+Q"squid:SwitchLastCaseIsDefaultCheck›""Add a default case to this switch.(ºÛˆ
+c
+squid:S128ş"LEnd this switch case with an unconditional break, return or throw statement.(éáÌ
+asquid:S1192ò"JDefine a constant instead of duplicating this literal "Ğ²Ñ‚ Ñ‡Ñ‚" 4 times.(¾ŒŒJ
+¯%squid:RedundantThrowsDeclarationCheck”"xRemove the declaration of thrown exception 'java.io.FileNotFoundException' which is a subclass of 'java.io.IOException'.(’”ğ÷úÿÿÿÿ
+@squid:S1148›"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Hsquid:S2446÷"0"notify" may not wake up the appropriate thread.(Â€äÔ
+hsquid:CommentedOutCodeLine–"<This block of commented-out lines of code should be removed.(ÊÀÚĞùÿÿÿÿ
+hsquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(”…ùÕıÿÿÿÿ
+U
+squid:S106‡"9Replace this use of System.out or System.err by a logger.(‹À¢ùÿÿÿÿ
+^squid:S1126Â"AReplace this if-then-else statement by a single return statement.(ÛŞğıÿÿÿÿ
+h
+squid:S128Š"LEnd this switch case with an unconditional break, return or throw statement.(›‰î²ıÿÿÿÿ
+esquid:S5361Ô"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ßĞààÿÿÿÿÿ
+hsquid:CommentedOutCodeLine‰"<This block of commented-out lines of code should be removed.(£­«øùÿÿÿÿ
+U
+squid:S106Œ"9Replace this use of System.out or System.err by a logger.(‰µ¡’ÿÿÿÿÿ
+hsquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(”…ùÕıÿÿÿÿ
+hsquid:CommentedOutCodeLineŞ"<This block of commented-out lines of code should be removed.(”…ùÕıÿÿÿÿ
+Q"squid:SwitchLastCaseIsDefaultCheckè""Add a default case to this switch.(ÑÚ²Ä
+Rsquid:S1141ê"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Nsquid:S1611â"6Remove the parentheses around the "classDay" parameter(öÑê…
+hsquid:S1192ñ"QDefine a constant instead of duplicating this literal "Ğ¿Ğ½ ÑÑ€ Ğ¿Ñ‚Ğ½" 4 times.(Öˆë
+]squid:S2259¸"EA "NullPointerException" could be thrown; "desktop" is nullable here.(ÎÖ‡Œ
+|squid:S1192ï"_Define a constant instead of duplicating this literal " Ğ¾Ğ¶Ğ¸Ğ´Ğ°Ğ»Ğ¾ÑÑŒ Ñ‡Ğ¸ÑĞ»Ğ¾" 3 times.(‹À¢ùÿÿÿÿ
+Dsquid:S1481ø",Remove this unused "student" local variable.(“öÊ£
+hsquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(ûè‘ùÿÿÿÿ
+hsquid:CommentedOutCodeLine§"<This block of commented-out lines of code should be removed.(”…ùÕıÿÿÿÿ
+Esquid:S1604š"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+U
+squid:S106—"9Replace this use of System.out or System.err by a logger.(ù¦ğãüÿÿÿÿ
+bsquid:CommentedOutCodeLineÜ"<This block of commented-out lines of code should be removed.(¨Î„o
+bsquid:CommentedOutCodeLine\"<This block of commented-out lines of code should be removed.(ó©¤æ
+csquid:CommentedOutCodeLineã"<This block of commented-out lines of code should be removed.(éÉĞÏ
+csquid:S2142ò"FEither re-interrupt this method or rethrow the "InterruptedException".(è®ã¶øÿÿÿÿ
+hsquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.(ÊœÍşÿÿÿÿ
+U
+squid:S106©"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ
+\
+squid:S106«"9Replace this use of System.out or System.err by a logger.(–Áõ‹ıÿÿÿÿ8û´Ü Ô-
+Esquid:S3077t".Remove the "volatile" keyword from this field.(·ËÖí
+Csquid:S1481{"'Remove this unused "fc" local variable.(êƒ±øûÿÿÿÿ
+p
+squid:S135¬"YReduce the total number of break and continue statements in this loop to use at most one.(µŸ»Ğ
+hsquid:CommentedOutCodeLineş"<This block of commented-out lines of code should be removed.(ÊÔ»şÿÿÿÿ
+U
+squid:S106Ö"9Replace this use of System.out or System.err by a logger.(Ï’Ûöÿÿÿÿÿ
+P
+squid:S106ó"9Replace this use of System.out or System.err by a logger.(”¨Ÿ
+Rsquid:S1141‹"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+hsquid:CommentedOutCodeLine„"<This block of commented-out lines of code should be removed.(”…ùÕıÿÿÿÿ
+csquid:CommentedOutCodeLineñ"<This block of commented-out lines of code should be removed.(ä±˜Ø
+ª%squid:RedundantThrowsDeclarationCheck”"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(’”ğ÷úÿÿÿÿ8í˜Œ Ô-
+Qsquid:S4973À"9Use the "equals" method if value comparison was intended.(ŒÃ·Ù
+nsquid:CommentedOutCodeLineG"<This block of commented-out lines of code should be removed.(èÑ÷ˆıÿÿÿÿ8ó°ùŸÔ-
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(œ¦÷ïÿÿÿÿÿ
+csquid:CommentedOutCodeLineÒ"<This block of commented-out lines of code should be removed.(â½Ó¶
+Q"squid:SwitchLastCaseIsDefaultCheckë""Add a default case to this switch.(íâİâ
+hsquid:CommentedOutCodeLineË"<This block of commented-out lines of code should be removed.(”…ùÕıÿÿÿÿ
+u
+squid:S135ª"YReduce the total number of break and continue statements in this loop to use at most one.(ø®Şşÿÿÿÿ
+\squid:S1226ù"DIntroduce a new variable instead of reusing the parameter "student".(¹ãÊ²
+Wsquid:S1854å"?Remove this useless assignment to local variable "discountPay".(Şç×Å
+Esquid:S1604Ñ"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+U
+squid:S106ì"9Replace this use of System.out or System.err by a logger.(êì…Üøÿÿÿÿ
+Rsquid:S1141—"5Extract this nested try block into a separate method.(¦ şÿÿÿÿ
+U
+squid:S106ï"9Replace this use of System.out or System.err by a logger.(‹À¢ùÿÿÿÿ
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(§Ö£68í˜Œ Ô-
+Ssquid:S1611¯"6Remove the parentheses around the "classDay" parameter(âªĞÿÿÿÿÿ
+U
+squid:S106Õ"9Replace this use of System.out or System.err by a logger.(ÖÑËëùÿÿÿÿ
+csquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(ï®å‡
+Esquid:S1604…"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+U
+squid:S106†"9Replace this use of System.out or System.err by a logger.(øÉ­¯ÿÿÿÿÿ
+csquid:S2142ú"FEither re-interrupt this method or rethrow the "InterruptedException".(è®ã¶øÿÿÿÿ
+nsquid:S1192ï"QDefine a constant instead of duplicating this literal "Ğ’ ÑÑ‡ĞµĞ¹ĞºĞµ " 3 times.(‹À¢ùÿÿÿÿ
+`squid:S2276ñ"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(¤ù»ÿÿÿÿÿ
+Ssquid:S1611Æ"6Remove the parentheses around the "classDay" parameter(âªĞÿÿÿÿÿ
+Nsquid:S2696‚"6Make the enclosing method "static" or remove this set.(Ä ¿·
+Q"squid:SwitchLastCaseIsDefaultCheck½""Add a default case to this switch.(ºÛˆ
+Ssquid:S1611Ú"6Remove the parentheses around the "classDay" parameter(âªĞÿÿÿÿÿ
+Qsquid:S4973Ì"9Use the "equals" method if value comparison was intended.(ŒÃ·Ù
+gsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áŸÄ­
+Esquid:S1604¡"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ
+@squid:S1148º"#Use a logger to log this exception.(Ú¸ÿÿÿÿÿ
+Rsquid:S2274ş":Remove this call to "wait" or move it into a "while" loop.(Åá‡Ì

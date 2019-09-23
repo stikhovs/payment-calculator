@@ -1,0 +1,22 @@
+
+`squid:UselessImportCheck"7Remove this unused import 'javafx.scene.control.Label'.(ö²­ÿÿÿÿÿ
+wsquid:S1450#"[Remove the "saveFilePath" field and declare it as a local variable in the relevant methods.(Ó‘¬¬øÿÿÿÿ
+Lsquid:S2696G"6Make the enclosing method "static" or remove this set.(³ÓÄl
+Rsquid:S2696H"6Make the enclosing method "static" or remove this set.(ÓïÑÏıÿÿÿÿ
+Rsquid:S2696I"6Make the enclosing method "static" or remove this set.(ÍÙÒÔüÿÿÿÿ
+O
+squid:S106K"9Replace this use of System.out or System.err by a logger.(‡à‹Ş
+O
+squid:S106O"9Replace this use of System.out or System.err by a logger.(ä‰çå
+fsquid:S00100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áŸÄ­
+Rsquid:S2696V"6Make the enclosing method "static" or remove this set.(©ÓÁ“ùÿÿÿÿ
+Msquid:S2696W"6Make the enclosing method "static" or remove this set.(™ ±¬
+O
+squid:S106X"9Replace this use of System.out or System.err by a logger.(ÈëÚú
+O
+squid:S106Y"9Replace this use of System.out or System.err by a logger.(Äûü§
+Rsquid:S2696Z"6Make the enclosing method "static" or remove this set.(…Ï¹ºıÿÿÿÿ
+[squid:S3252ƒ">Use static access with "java.util.Calendar" for "getInstance".(ê¬Õÿÿÿÿÿ
+Msquid:S2209„"5Change this instance-reference to a static reference.(ª»à
+Lsquid:S1068#"0Remove this unused "saveFilePath" private field.(Ó‘¬¬øÿÿÿÿ
+gsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(ñ‘Ëøÿÿÿÿ

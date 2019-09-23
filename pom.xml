@@ -90,6 +90,39 @@
 					<outputFileName>Administrator Helper</outputFileName>
 				</configuration>
 			</plugin>
+
+			<!-- LAUNCH4J -->
+			<plugin>
+				<groupId>com.akathist.maven.plugins.launch4j</groupId>
+				<artifactId>launch4j-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>l4j-clui</id>
+						<phase>package</phase>
+						<goals>
+							<goal>launch4j</goal>
+						</goals>
+						<configuration>
+							<headerType>gui</headerType>
+							<jar>target/payment-calculator-0.0.1-SNAPSHOT.jar</jar>
+							<outfile>target/Payment Calculator.exe</outfile>
+							<icon>src/resources/LL.ico</icon>
+							<classPath>
+								<mainClass>paymentcalculation.PaymentCalculation</mainClass>
+							</classPath>
+							<jre>
+								<bundledJre64Bit>false</bundledJre64Bit>
+								<bundledJreAsFallback>false</bundledJreAsFallback>
+								<minVersion>1.8.0</minVersion>
+								<jdkPreference>preferJre</jdkPreference>
+								<runtimeBits>64/32</runtimeBits>
+							</jre>
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 	<dependencies>
@@ -128,6 +161,12 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>ooxml-schemas</artifactId>
 			<version>1.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.akathist.maven.plugins.launch4j/launch4j-maven-plugin -->
+		<dependency>
+			<groupId>com.akathist.maven.plugins.launch4j</groupId>
+			<artifactId>launch4j-maven-plugin</artifactId>
+			<version>1.7.25</version>
 		</dependency>
 
 	</dependencies>
