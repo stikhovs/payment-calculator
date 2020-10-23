@@ -572,6 +572,15 @@ public class ViewThree implements Initializable {
                     if (sheet.getSheetName().equals("оста")) {
                         continue;
                     }
+                    if (sheet.getSheetName().equals("ф_01(03)")) {
+                        continue;
+                    }
+                    if (sheet.getSheetName().equals("ф_02(03)")) {
+                        continue;
+                    }
+                    if (sheet.getSheetName().equals("ф_03(03)")) {
+                        continue;
+                    }
 
                     /* Отбор нужных листов (критерий - наличие в списке фамилий хотя бы одной записи) */
                     if (!isNameListEmpty(sheet)) {
